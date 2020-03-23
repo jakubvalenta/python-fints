@@ -1472,6 +1472,8 @@ class FinTS3PinTanClient(FinTS3Client):
         ):
             return False
         else:
+            if seg.header.type == 'HKKAZ':  # TODO: Remove this DKB hack.
+                return True
             hipins = self.bpd.find_segment_first(HIPINS1)
             if not hipins:
                 return False
