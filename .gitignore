@@ -1,10 +1,11 @@
+*.egg-info
+*.pyc
+.idea/
+.mypy_cache
 __pycache__/
 build/
 dist/
-*.egg-info
 env
-.idea/
 test*.py
 !tests/*
 tests/messages/private_*
-*.pyc
